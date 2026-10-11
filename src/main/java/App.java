@@ -76,7 +76,7 @@ public final class App {
     }
 
     private static Connection connect() throws Exception {
-        String url = "jdbc:postgresql://" + DB_HOST + ":" + DB_PORT + "/" + DB_NAME;
+        String url = "jdbc:postgresql://" + DB_HOST + ":" + DB_PORT + "/" + DB_NAME + "?sslmode=disable";
         return DriverManager.getConnection(url, DB_USER, DB_PASSWORD);
     }
 
